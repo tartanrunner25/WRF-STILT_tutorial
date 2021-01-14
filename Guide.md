@@ -1,3 +1,4 @@
+<img src='WRF-STILT_run.png' width=500px align='right' style='padding-left:30px'>
 # WRF-STILT tutorial
 *Written by Derek V. Mallia and Ben Fasoli*<br>
 *Version: January 14th, 2021*
