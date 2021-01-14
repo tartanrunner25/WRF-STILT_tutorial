@@ -1,5 +1,5 @@
 # WRF-STILT tutorial
-*Written by Derek V. Mallia and Ben Fasoli*
+*Written by Derek V. Mallia and Ben Fasoli*<br>
 *Version: January 14th, 2021*
 
 **PREFACE:**<br>
