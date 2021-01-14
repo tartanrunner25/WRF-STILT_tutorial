@@ -5,7 +5,7 @@
 <img src='WRF-STILT_run.png' width=500px align='right' style='padding-left:30px'>
 
 **PREFACE:**<br>
-If you are reading this tutorial you are likely interested in running HYSPLIT-STILT with model output from the Weather Research and Forecast model (Skamarock et al. 2008). First, why *WRF-STILT*?
+If you are reading this tutorial you are likely interested in running HYSPLIT-STILT with model output from the Weather Research and Forecast model (WRF; Skamarock et al. 2008). First, why *WRF-STILT*?
 
 1) While there are a number of meteorological input files out there, many of these analyses have either limited domains and/or spatial resolution. Coarse spatial resolution can limit the ability for STILT to accurately trace air flow in areas with complex terrain and/or fine-scale meteorological circulations. WRF offers a way to downscale coarser-scale meteorological analyses to resolutions needed to resolve smaller-scale phenomena.
 2) Many analyses just do not cover times you are interested. The High-Resolution Rapid Refresh model (HRRR) is a state of the art NWP model that has the grid spacing needed to resolve most mesoscale circulations. However, HRRR has only been operational since 2015. If you want to investigate something before that, you could be out of luck!
@@ -30,6 +30,9 @@ Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can
 
 
 # Setting up the WRF ARL converter 
+
+
+# References
 
 
 
