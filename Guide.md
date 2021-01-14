@@ -19,3 +19,7 @@ If you are reading this tutorial you are likely interested in running HYSPLIT-ST
 With that said, let's get you up and running with WRF. 
 
 
+# Before running WRF
+
+
+
