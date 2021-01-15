@@ -92,6 +92,8 @@ When running the ARL converter code, you should hopefully see the following line
 
 ❗ The numbers printed above will depend on the domain size and date of your WRF simulations ❗
 
+👍 One final tip! If you are using time-averaged winds, not that the first few frames of your WRF simulation *MAY NOT* have these variables available since these are generally computed as hourly "averages". So be sure to account for this when running your STILT simulations later on. Personally, I usually just toss out the first 3 hours of any WRF simulation since the model needs time to "spin up" mesoscale circulations!
+
 <br>
 <br>
 
@@ -99,7 +101,10 @@ When running the ARL converter code, you should hopefully see the following line
 
 :warning: If you are using HYSPLIT-SILT v2020-05-24 (version 5), there may be compatibility issues with ARL converted WRF files. :warning:
 
-Hopefull
+Hopefully, everything ran smoothly and that you have some cool WRF ARL files to play with! At this point, you can treat your newly created WRF ARL files as any other ARL file that you would use with HYSPLIT-STILT. 
+
+# Tutorial
+
 
 # References
 
