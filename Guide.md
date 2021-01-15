@@ -2,7 +2,7 @@
 *Written by Derek V. Mallia and Ben Fasoli*<br>
 *Version: January 14th, 2021*
 
-<img src='WRF-STILT_run.png' width=500px align='right' style='padding-left:30px'>
+<img src='./images/WRF-STILT_run.png' width=500px align='right' style='padding-left:30px'>
 
 **PREFACE:**<br>
 If you are reading this tutorial you are likely interested in running HYSPLIT-STILT with model output from the Weather Research and Forecast model (WRF; Skamarock et al. 2008). First, why *WRF-STILT*?
@@ -26,7 +26,7 @@ Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can
 
 To activate the history output `hr` for the variables needed by the ARL converter, users should change the following lines within `./Registry/Registry.EM_COMMON`: 
 
-<img src='registry.png' width=900px align='center' style='padding-left:50px'>
+<img src='./images/registry.png' width=900px align='center' style='padding-left:50px'>
 
 
 The following lines should also be added added to the wrf namelist `namelist.input` under the &dynamics section:
