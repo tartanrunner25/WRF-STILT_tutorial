@@ -7,22 +7,21 @@
 **PREFACE:**<br>
 If you are reading this tutorial you are likely interested in running HYSPLIT-STILT with model output from the Weather Research and Forecast model (WRF; Skamarock et al. 2008). First, why *WRF-STILT*?
 
-1) While there are a number of meteorological input files out there, many of these analyses have either limited domains and/or spatial resolution. Coarse spatial resolution can limit the ability for STILT to accurately trace air flow in areas with complex terrain and/or fine-scale meteorological circulations. WRF offers a way to downscale coarser-scale meteorological analyses to resolutions needed to resolve smaller-scale phenomena.
-2) Many analyses just do not cover times you are interested. The High-Resolution Rapid Refresh model (HRRR) is a state of the art NWP model that has the grid spacing needed to resolve most mesoscale circulations. However, HRRR has only been operational since 2015. If you want to investigate something before that, you could be out of luck!
-3) Model and model analyses have biases. There are just some meteorological phenomena that these analyses struggle with. For example, NWP models have a hard time getting snowpack correct. Across the Intermountain West, this snowpack can be really important driver for persistent cold-pool inversions in mountain-valley basins. Many times, snow depth is a quantity that can be better prescribed in a model like WRF, which may give the model a better chance at resolving persistent cold-pool inversions, which can ultimately impact local transport. This is just one of many examples why someone may want to use WRF over other model analyses.
+1) While there are a number of meteorological input files out there, many of these analyses have either limited domains and/or spatial resolution. Coarse spatial resolution can limit the ability for STILT to accurately trace air flow in areas with complex terrain and/or fine-scale meteorological circulations. WRF offers a way to downscale coarser-scale meteorology to the resolutions needed to resolve smaller-scale phenomena.
+2) Many analyses just do not cover times you are interested. The High-Resolution Rapid Refresh model (HRRR) is a state of the art NWP model that has the grid spacing needed to resolve most mesoscale circulations. However, HRRR has only been operational since 2015. If you want to investigate something before that, you will be out of luck when using HRRR!
+3) Model and model analyses have biases. There are just some meteorological phenomena that these analyses struggle with. For example, NWP models have a hard time getting snowpack correct. Across the Intermountain West, this snowpack can be really important driver for persistent cold-pool inversions in mountain-valley basins. Many times, snow depth is a quantity that can be better prescribed in a model like WRF, which may give the model a better chance at resolving persistent cold-pool inversions, which can ultimately impact local transport. This is just one of many examples why someone may want to use WRF.
 
 *However, there are some cavaets...*
-1) WRF is not easy to use. If you have a colleague that can run WRF for you, lucky you! In most cases, this is not an option. This tutorial is not meant to show you how to become a proficient WRF modeler as this can take months to even years of practice. The most this tutorial will do is show you how to convert output files already generated from WRF. More information on WRF can be found [here!](https://www2.mmm.ucar.edu/wrf/users/)
+1) WRF is not easy to use. If you have a colleague that can run WRF for you, lucky you! In most cases, this is not an option. This tutorial is not meant to show you how to become a proficient WRF modeler as this can take months to even years of practice. The most this tutorial will do is show you how to convert output files already generated from WRF and run them with HYSPLIT-STILT. More information on WRF can be found [here!](https://www2.mmm.ucar.edu/wrf/users/)
 2) Always look at your model output with a careful eye. Just because WRF ran, does not mean it produced something realistic (most time it does, thankfully). Always be sure to evaluate your model data with observations!
 3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and first see if they make sense for your application/research! It may not be necessary to re-invent the wheel!
 
-Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities.
-With that said, let's get you up and running with WRF-STILT. 
+Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities. We would also like to akcnolwedge NOAA's Air Resources Laboratory for maintaining the HYSPLIT-STILT model code, and for sharing some of the scripts and configuration files provided below. While the authors are familar with the HYSPLIT-STILT modeling framework, note that we do have very busy work schedules and may not be able to immediately respond to every help request. With that said, let's get you up and running with WRF-STILT. 
 
 
 # Before running WRF
 
-Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can be drastically improved by using time-average winds instead of the instantanous winds that are often produced for each output frame. As a result, we encourage WRF-STILT users to modify the WRF Registry so that time-average winds are added to the WRF output file. 
+Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can be drastically improved by using time-average winds instead of the instantanous winds, which are provided at the time of the output frame. Essentially, these winds may not be representative of the winds during the entire hour. As a result, we encourage WRF-STILT users to modify the WRF Registry so that time-average winds are added to the WRF output file. 
 
 To activate the history output `hr` for the variables needed by the ARL converter, users should change the following lines within `./Registry/Registry.EM_COMMON`: 
 
@@ -40,20 +39,18 @@ Finally, note that any time a change is made to the WRF Registry, WRF will need 
 
 # Compiling the WRF ARL converter 
 
-If you are installing STILT v2.0 using pre-compiled libraries (recommended), no additional action is needed to set up the `arw2arl` executable, which should be located in STILT v2.0's `./exe` directory. If you decide to compile your HYSPLIT-STILT code from source, you will need to make additional changes to the `Makefile.inc` by linking netCDF environment paths to the appropriate libraries:
+If you are installing STILT v2.0 and are using pre-compiled libraries (recommended), no additional action is needed to set up the `arw2arl` executable, which should be located in STILT v2.0's `./exe` directory. If you are this type of user, proceed to **Running the WRF ARL converter**. If you decide to compile your HYSPLIT-STILT code from source, you will need to make additional changes to the `Makefile.inc` by linking netCDF environment paths to the appropriate libraries:
 
 For example:
 
 > NETINC= -I/uufs/chpc.utah.edu/common/home/lin-group12/software/local/include<br>
 > NETLIBS= -L/uufs/chpc.utah.edu/common/home/lin-group12/software/local/lib -lnetcdff	# for netCDF4<br>
 
-Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following commands to compile the arw2arl code:
+Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following command to compile the arw2arl code:
 
 > (cd data2arl/arw2arl && make)
 
 Once the compilation finishes, check the `exec` directory to ensure that the arw2arl executable has been created. 
-
-
 
 <br>
 <br>
@@ -107,7 +104,7 @@ Hopefully, everything ran smoothly and that you have some cool WRF ARL files to 
 
 # Tutorial
 
-Listed below is a tutorial for running WRF-STILT. In this tutorial sample WRF files have been provided for your convenience. These files can be downloaded from the following link: http://home.chpc.utah.edu/~u0703457/people_share/ARL_converter/WRF_tutorial_files/
+Listed below is a tutorial for running WRF-STILT. In this tutorial, sample WRF files have been provided for your convenience. These files can be downloaded from the following link: http://home.chpc.utah.edu/~u0703457/people_share/ARL_converter/WRF_tutorial_files/
 
 In addition, download the following script `runarw_tutorial.sh` (provided in the top directory) for converting multiple WRF netCDF files.
 <br><br>
