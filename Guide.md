@@ -17,7 +17,7 @@ If you are reading this tutorial you are likely interested in running HYSPLIT-ST
 3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and first see if they make sense for your application/research! It may not be necessary to re-invent the wheel!
 
 Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities.
-With that said, let's get you up and running with WRF. 
+With that said, let's get you up and running with WRF-STILT. 
 
 
 # Before running WRF
