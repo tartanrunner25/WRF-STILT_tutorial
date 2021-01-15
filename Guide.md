@@ -97,8 +97,8 @@ When running the ARL converter code, you should hopefully see the following line
 # Running HYSPLIT-STILT with WRF ARL files
 
 :warning: If you are using HYSPLIT-SILT v2020-05-24 (version 5), there may be compatibility issues with ARL converted WRF files. :warning:
-<br>
-Hopefully, everything ran smoothly and that you have some cool WRF ARL files to play with! At this point, you can treat your newly created WRF ARL files as any other ARL file that you would use with HYSPLIT-STILT. 
+<br><br>
+Hopefully, everything ran smoothly and that you have some cool WRF ARL files to play with! At this point, you can treat your newly created WRF ARL files as any other ARL file that you would use with HYSPLIT-STILT. Just be sure to link your new WRF ARL files within the `run_stilt.r` script.
 <br>
 <br>
 
