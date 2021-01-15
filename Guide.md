@@ -110,11 +110,12 @@ Hopefully, everything ran smoothly and that you have some cool WRF ARL files to 
 Listed below is a tutorial for running WRF-STILT. In this tutorial sample WRF files have been provided for your convenience. These files can be downloaded from the following link: http://home.chpc.utah.edu/~u0703457/people_share/ARL_converter/WRF_tutorial_files/
 
 In addition, download the following script `runarw_tutorial.sh` (provided in the top directory) for converting multiple WRF netCDF files.
+<br><br>
 
 Step 1) Downloaded the WRF files to your working directory, preferably to the same directory as your `arw2arl` executable. Edit the `runarw_tutorial.sh` script accordingly. This includes setting the correct file path locations.
-
+<br><br>
 Step 2) Run the shell script: `./runarw_tutorial.sh`. Be sure that `WRFDATA.CFG` is located in in the same directory as your script. 
-
+<br><br>
 Step 3) After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected. The lines lists that lines that you may want to adjust and how.
 
 > #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)<br>
@@ -161,7 +162,7 @@ Step 3) After you have successfully converted the WRF files provided above, edit
 
 <br><br>
 Step 4) Once you are done editing the `run_stilt.r` script, be sure to save it. Then, run the script from your terminal `Rscript run_stilt.r`
-
+<br><br>
 Step 5) If the run was a success, STILT trajectory and footprint files should be located in the out directory `./out`
 <br><br>
 
