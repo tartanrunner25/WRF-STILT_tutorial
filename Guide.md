@@ -73,6 +73,7 @@ In order to run the executable with the file of interest you simply need to exec
 
 > ./arw2arl -i$WRF_FILE_PATH_HERE/WRF_FILE_NAME_HERE -c2
 
+<br><br>
 Note that in this example, we did not specify an output name, thus, the default filename was used `WRFDATA.ARL`
 
 For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly.
