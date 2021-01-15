@@ -171,7 +171,7 @@ In addition, download the following script `runarw_tutorial.sh` (provided in the
 
 # Acknowledgements
 
-Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities. We would also like to acknowledge [NOAA's Air Resources Laboratory](https://www.arl.noaa.gov) for maintaining the HYSPLIT-STILT model code, and for sharing some of the scripts and configuration files provided below. While the authors are familar with the HYSPLIT-STILT modeling framework, note that we do have very busy work schedules and may not be able to immediately respond to every help request. 
+Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities. We would also like to acknowledge [NOAA's Air Resources Laboratory](https://www.arl.noaa.gov) for maintaining the HYSPLIT-STILT model code, and for sharing some of the scripts and configuration files provided here. While the authors are familar with the HYSPLIT-STILT modeling framework, it should be mentioned that we have very busy work schedules and may not be able to immediately respond to every help request. 
 
 We would finally like to acknowledge NOAA Climate Program Office’s Atmospheric Chemistry, Carbon Cycle, and Climate program (NA17OAR4310084) for supporting the work here.
 <br><br>
