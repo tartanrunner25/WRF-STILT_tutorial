@@ -26,7 +26,7 @@ Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can
 
 To activate the history output for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
 
-<img src='registry.png' width=800px align='center' style='padding-left:50px'>
+<img src='registry.png' width=1000px align='center' style='padding-left:50px'>
 
 
 **Before:**
