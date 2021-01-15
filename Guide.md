@@ -69,6 +69,11 @@ The `WRFDATA.CFG` file is responsible for configuring the ARL converter to run w
 
 For now, stick with the default `WRFDATA.CFG` file, which has been provided within the repository (top level).
 
+In order to run the executable with the file of interest you simply need to execute the `arw2arl` code, followed by the input WRF filename and path `-i`, the name of the file that will be created `-o`, and a flag that specifies the configuration file type that we will be using (`-c1`, `-c2`, or `-c3`). For time-average winds, we use `-c2`. The line that we execute in our terminal line should look something like this:
+
+`./arw2arl -i$WRF_FILE_PATH_HERE/WRF_FILE_NAME_HERE -c2`
+
+
 
 <br>
 <br>
