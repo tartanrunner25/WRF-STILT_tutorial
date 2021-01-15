@@ -28,17 +28,17 @@ To activate the history output for the variables needed by the ARL converter, us
 
 **Before:**
 
-> state    real   muu             ij     dyn_em      1          -      -          "muu"
-> state    real   muv             ij     dyn_em      1          -      -          "muv"
-> state    real   mut             ij     dyn_em      1          -      -          "mut"
-> state    real   alt            ikj     dyn_em      1          -      -          "alt"         "inverse density"
+> state    real   muu             ij     dyn_em      1          -      -          "muu"<br>
+> state    real   muv             ij     dyn_em      1          -      -          "muv"<br>
+> state    real   mut             ij     dyn_em      1          -      -          "mut"<br>
+> state    real   alt            ikj     dyn_em      1          -      -          "alt"         "inverse density"<br>
 
 **After:**
 
-> state    real   muu             ij     dyn_em      1          -     hr          "muu"
-> state    real   muv             ij     dyn_em      1          -     hr          "muv"
-> state    real   mut             ij     dyn_em      1          -     hr          "mut"
-> state    real   alt            ikj     dyn_em      1          -     hr          "alt"         "inverse density"
+> state    real   muu             ij     dyn_em      1          -     hr          "muu"<br>
+> state    real   muv             ij     dyn_em      1          -     hr          "muv"<br>
+> state    real   mut             ij     dyn_em      1          -     hr          "mut"<br>
+> state    real   alt            ikj     dyn_em      1          -     hr          "alt"         "inverse density"<br>
 
 
 
