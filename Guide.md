@@ -44,10 +44,10 @@ If you are installing STILT v2.0 using pre-compiled libraries (recommended), no 
 
 For example:
 
-`NETINC= -I/uufs/chpc.utah.edu/common/home/lin-group12/software/local/include`<br>
-`NETLIBS= -L/uufs/chpc.utah.edu/common/home/lin-group12/software/local/lib -lnetcdff	# for netCDF4`<br>
+> NETINC= -I/uufs/chpc.utah.edu/common/home/lin-group12/software/local/include<br>
+> NETLIBS= -L/uufs/chpc.utah.edu/common/home/lin-group12/software/local/lib -lnetcdff	# for netCDF4<br>
 
-Once the appropriate paths have been set, run the following commands to compile the arw2arl code:
+Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following commands to compile the arw2arl code:
 
 > make library/libhysplit.a library/liblbfgsb.a<br>
 > (cd exec && make hycs_std)
