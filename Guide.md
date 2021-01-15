@@ -37,9 +37,16 @@ Finally, note that any time a change is made to the WRF Registry, WRF will need 
 <br>
 <br>
 
-# Setting up the WRF ARL converter 
+# Compiling the WRF ARL converter 
 
+If you are installing STILT v2.0 using pre-compiled libraries (recommended), no additional action is needed to set up the `arw2arl` executable, which should be located in STILT v2.0's `./exe` directory. If you decide to compile your HYSPLIT-STILT code from source, you will need to make additional changes to the `Make.inc`
 
+<br>
+<br>
+# Running the WRF ARL converter 
+
+<br>
+<br>
 # References
 
 Nehrkorn, T., J. Eluszkiewicz, S. C. Wofsy, J. C. Lin, C. Gerbig, M. Longo, and S. Freitas, 2010: Coupled weather research and forecasting - stochastic time-inverted lagrangian transport (WRF-STILT) model. Meteor. Atmos. Phys., 107 (1), 51-64, doi:10.1007/s00703-010-0068-x.
