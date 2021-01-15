@@ -67,16 +67,16 @@ The next step of this guide is to show you how to run the `arw2arl` code on WRF 
 
 The `WRFDATA.CFG` file is responsible for configuring the ARL converter to run with your WRF input files. Most of the times, this can be left as the default, which has been provided below. However, there are some instances were you may need to make changes to this file, such as using instantaneous winds, TKE variables, and so on. More documentation on how to setup the configuration can be found here: https://github.com/tartanrunner25/WRF-STILT_tutorial/blob/main/Note-arw2arl.pdf
 
-For now, stick with the default `WRFDATA.CFG` file, which has been provided within the repository (top level).
+For now, stick with the default `WRFDATA.CFG` file, which has been provided within the repository (top level). This file should be in the same directory that you are running the code from.
 
 In order to run the executable with the file of interest you simply need to execute the `arw2arl` code, followed by the input WRF filename and path `-i`, the name of the file that will be created `-o`, and a flag that specifies the configuration file type that we will be using (`-c1`, `-c2`, or `-c3`). For time-average winds, we use `-c2`. The line that we execute in our terminal line should look something like this:
 
 > ./arw2arl -i$WRF_FILE_PATH_HERE/WRF_FILE_NAME_HERE -c2
 
 <br><br>
-Note that in this example, we did not specify an output name, thus, the default filename was used `WRFDATA.ARL`
+Note that in this example, we did not specify an output name, thus, the default filename was used `WRFDATA.ARL`. 
 
-For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly.
+For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly. 
 
 When running the ARL converter code, you should hopefully see the following lines being printed to your terminal screen:
 
@@ -108,6 +108,61 @@ Hopefully, everything ran smoothly and that you have some cool WRF ARL files to 
 # Tutorial
 
 Listed below is a tutorial for running WRF-STILT. In this tutorial sample WRF files have been provided for your convenience. These files can be downloaded from the following link: http://home.chpc.utah.edu/~u0703457/people_share/ARL_converter/WRF_tutorial_files/
+
+In addition, download the following script `runarw_tutorial.sh` (provided in the top directory) for converting multiple WRF netCDF files.
+
+Step 1) Downloaded the WRF files to your working directory, preferably to the same directory as your `arw2arl` executable. Edit the `runarw_tutorial.sh` script accordingly. This includes setting the correct file path locations.
+
+Step 2) Run the shell script: `./runarw_tutorial.sh`. Be sure that `WRFDATA.CFG` is located in in the same directory as your script. 
+
+Step 3) After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected:
+
+> #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)
+> t_start <- '2015-09-06 00:00:00'
+> t_end   <- '2015-09-06 03:00:00'
+> run_times <- seq(from = as.POSIXct(t_start, tz = 'UTC'),
+>                  to   = as.POSIXct(t_end, tz = 'UTC'),
+>                  by   = 'hour')
+> 
+> #Receptor location(s)
+> lati <- 40.740
+> long <- -111.860
+> zagl <- 5
+>
+> #Footprint grid settings, must set at least xmn, xmx, ymn, ymx below<br>
+> hnf_plume <- T<br>
+> projection <- '+proj=longlat'<br>
+> smooth_factor <- 1<br>
+> time_integrate <- F<br>
+> xmn <- -114.0<br>
+> xmx <- -110.99<br>
+> ymn <- 39.0<br>
+> ymx <- 42.0<br>
+> xres <- 0.01<br>
+> yres <- xres<br><br>
+>
+> #Meteorological data input<br>
+> met_path   <- '/uufs/chpc.utah.edu/common/home/u0703457/links/convert_arw2arl'<br>
+> met_file_format <- 'wrfout_tutorial.arl'<br>
+> met_subgrid_buffer <- 0.1<br>
+> met_subgrid_enable <- F<br>
+> met_subgrid_levels <- NA<br>
+> n_met_min          <- 1<br>
+>
+> # Model control
+> n_hours    <- -24
+> numpar     <- 100
+> rm_dat     <- T
+> run_foot   <- T
+> run_trajec <- T
+> timeout    <- 3600
+> varsiwant  <- c('time', 'indx', 'long', 'lati', 'zagl', 'foot', 'mlht', 'dens',
+                'samt', 'sigw', 'tlgr','dmas')
+
+
+
+
+
 
 
 
