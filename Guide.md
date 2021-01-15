@@ -78,12 +78,26 @@ Note that in this example, we did not specify an output name, thus, the default 
 
 For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly.
 
+When running the ARL converter code, you should hopefully see the following lines being printed to your screen:
+
+> Using an existing decoding configuration: WRFDATA.CFG<br>
+> Using an existing encoding configuration: ARLDATA.CFG<br>
+>  NOTICE pakset:<br>
+>  Number of index records =            1<br>
+>  Number of records /time =          594<br>
+>  NOTICE pakini: start initialization rec =            1<br>
+>  NOTICE pakini:   end initialization rec =          594<br>
+> Initialized accumulated precip from file: WRFRAIN.BIN<br>
+> Completed:           15           9          11          18           0<br>
+
 <br>
 <br>
 
 # Running HYSPLIT-STILT with WRF ARL files
 
 :warning: If you are using HYSPLIT-SILT v2020-05-24 (version 5), there may be compatibility issues with ARL converted WRF files. :warning:
+
+Hopefull
 
 # References
 
