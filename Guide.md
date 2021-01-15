@@ -117,17 +117,17 @@ Step 2) Run the shell script: `./runarw_tutorial.sh`. Be sure that `WRFDATA.CFG`
 
 Step 3) After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected:
 
-> #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)
-> t_start <- '2015-09-06 00:00:00'
-> t_end   <- '2015-09-06 03:00:00'
-> run_times <- seq(from = as.POSIXct(t_start, tz = 'UTC'),
->                  to   = as.POSIXct(t_end, tz = 'UTC'),
->                  by   = 'hour')
+> #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)<br>
+> t_start <- '2015-09-06 00:00:00'<br>
+> t_end   <- '2015-09-06 03:00:00'<br>
+> run_times <- seq(from = as.POSIXct(t_start, tz = 'UTC'),<br>
+>                  to   = as.POSIXct(t_end, tz = 'UTC'),<br>
+>                  by   = 'hour')<br>
 > 
-> #Receptor location(s)
-> lati <- 40.740
-> long <- -111.860
-> zagl <- 5
+> #Receptor location(s)<br>
+> lati <- 40.740<br>
+> long <- -111.860<br>
+> zagl <- 5<br>
 >
 > #Footprint grid settings, must set at least xmn, xmx, ymn, ymx below<br>
 > hnf_plume <- T<br>
