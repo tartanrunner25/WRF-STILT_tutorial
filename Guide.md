@@ -118,6 +118,12 @@ In addition, download the following script `runarw_tutorial.sh` (provided in the
 <br><br>
 **Step 3)** After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected. The lines lists that lines that you may want to adjust and how.
 
+> #User inputs ------------------------------------------------------------------<br>
+> project <- 'NAME_OF_YOUR_PROJECT'<br>
+> stilt_wd <- file.path('YOUR/PATH/SHOULD/GO/HERE', project)<br>
+> output_wd <- file.path(stilt_wd, 'out')<br>
+> lib.loc <- .libPaths()[1]<br>
+>
 > #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)<br>
 > t_start <- '2015-09-06 00:00:00'<br>
 > t_end   <- '2015-09-06 03:00:00'<br>
