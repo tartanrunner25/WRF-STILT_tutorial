@@ -71,9 +71,11 @@ For now, stick with the default `WRFDATA.CFG` file, which has been provided with
 
 In order to run the executable with the file of interest you simply need to execute the `arw2arl` code, followed by the input WRF filename and path `-i`, the name of the file that will be created `-o`, and a flag that specifies the configuration file type that we will be using (`-c1`, `-c2`, or `-c3`). For time-average winds, we use `-c2`. The line that we execute in our terminal line should look something like this:
 
-`./arw2arl -i$WRF_FILE_PATH_HERE/WRF_FILE_NAME_HERE -c2`
+> ./arw2arl -i$WRF_FILE_PATH_HERE/WRF_FILE_NAME_HERE -c2
 
+Note that in this example, we did not specify an output name, thus, the default filename was used `WRFDATA.ARL`
 
+For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly.
 
 <br>
 <br>
