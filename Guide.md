@@ -40,7 +40,20 @@ Finally, note that any time a change is made to the WRF Registry, WRF will need 
 
 # Compiling the WRF ARL converter 
 
-If you are installing STILT v2.0 using pre-compiled libraries (recommended), no additional action is needed to set up the `arw2arl` executable, which should be located in STILT v2.0's `./exe` directory. If you decide to compile your HYSPLIT-STILT code from source, you will need to make additional changes to the `Make.inc`
+If you are installing STILT v2.0 using pre-compiled libraries (recommended), no additional action is needed to set up the `arw2arl` executable, which should be located in STILT v2.0's `./exe` directory. If you decide to compile your HYSPLIT-STILT code from source, you will need to make additional changes to the `Makefile.inc` by linking netCDF environment paths to the appropriate libraries:
+
+For example:
+
+`NETINC= -I/uufs/chpc.utah.edu/common/home/lin-group12/software/local/include`<br>
+`NETLIBS= -L/uufs/chpc.utah.edu/common/home/lin-group12/software/local/lib -lnetcdff	# for netCDF4`<br>
+
+Once the appropriate paths have been set, run the following commands to compile the arw2arl code:
+
+`make library/libhysplit.a library/liblbfgsb.a`<br>
+`(cd exec && make hycs_std)`
+
+
+
 
 <br>
 <br>
