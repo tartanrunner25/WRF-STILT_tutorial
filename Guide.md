@@ -1,5 +1,5 @@
 # WRF-STILT tutorial
-*Written by Derek V. Mallia and Ben Fasoli*<br>
+*Written by Derek V. Mallia, Ben Fasoli, and Chris Loughner*<br>
 *Version: January 14th, 2021*
 
 <img src='./images/WRF-STILT_run.png' width=500px align='right' style='padding-left:30px'>
@@ -16,7 +16,7 @@ If you are reading this tutorial you are likely interested in running HYSPLIT-ST
 2) Always look at your model output with a careful eye. Just because WRF ran, does not mean it produced something realistic (most time it does, thankfully). Always be sure to evaluate your model data with observations!
 3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and first see if they make sense for your application/research! It may not be necessary to re-invent the wheel!
 
-Before we conclude, the authors would like to acknowledge John C. Lin, Chris Loughner, and Thomas Nehrkorn for their support on WRF-STILT related activities.
+Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities.
 With that said, let's get you up and running with WRF. 
 
 
