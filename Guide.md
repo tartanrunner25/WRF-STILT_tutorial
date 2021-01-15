@@ -24,7 +24,7 @@ With that said, let's get you up and running with WRF.
 
 Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can be drastically improved by using time-average winds instead of the instantanous winds that are often produced for each output frame. As a result, we encourage WRF-STILT users to modify the WRF Registry so that time-average winds are added to the WRF output file. 
 
-To activate the history output `hr` for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
+To activate the history output `hr` for the variables needed by the ARL converter, users should change the following lines within `./Registry/Registry.EM_COMMON`: 
 
 <img src='registry.png' width=900px align='center' style='padding-left:50px'>
 
@@ -65,6 +65,7 @@ The next step of this guide is to show you how to run the `arw2arl` code on WRF 
 2) The ARL converter configuration file `WRFDATA.CFG`
 3) And of course, the ARL executable `arw2arl`
 
+The `WRFDATA.CFG` file is responsible for configuring the ARL converter to run with your WRF input files. Most of the times, this can be left as the default, which has been provided below. However, there are some instances were you may need to make changes to this file, such as using instantaneous winds, TKE variables, and so on. More documentation on how to setup the configuration can be found here: 
 
 <br>
 <br>
