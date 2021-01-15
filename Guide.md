@@ -14,7 +14,7 @@ If you are reading this tutorial you are likely interested in running HYSPLIT-ST
 *However, there are some cavaets...*
 1) WRF is not easy to use. If you have a colleague that can run WRF for you, lucky you! In most cases, this is not an option. This tutorial is not meant to show you how to become a proficient WRF modeler as this can take months to even years of practice. The most this tutorial will do is show you how to convert output files already generated from WRF and run them with HYSPLIT-STILT. More information on WRF can be found [here!](https://www2.mmm.ucar.edu/wrf/users/)
 2) Always look at your model output with a careful eye. Just because WRF ran, does not mean it produced something realistic (most time it does, thankfully). Always be sure to evaluate your model data with observations!
-3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and first see if they make sense for your application/research! It may not be necessary to re-invent the wheel!
+3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and see if they make sense for your application/research! It may not be necessary to re-invent the wheel by running WRF!
 <br><br>
 If WRF-STILT still makes sense for your application, proceed below!
 <br><br>
