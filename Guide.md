@@ -49,9 +49,9 @@ For example:
 
 Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following commands to compile the arw2arl code:
 
-> make library/libhysplit.a library/liblbfgsb.a<br>
-> (cd exec && make hycs_std)
+> (cd data2arl/arw2arl && make)
 
+Once the compilation finishes, check the `exec` directory to ensure that the arw2arl executable has been created. 
 
 
 
@@ -62,6 +62,10 @@ Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the fol
 
 <br>
 <br>
+
+# Running HYSPLIT-STILT with WRF ARL files
+
+:warning: If you are using HYSPLIT-SILT v2020-05-24 (version 5), there may be compatibility issues with ARL converted WRF files. :warning:
 
 # References
 
