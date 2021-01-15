@@ -65,7 +65,10 @@ The next step of this guide is to show you how to run the `arw2arl` code on WRF 
 2) The ARL converter configuration file `WRFDATA.CFG`
 3) And of course, the ARL executable `arw2arl`
 
-The `WRFDATA.CFG` file is responsible for configuring the ARL converter to run with your WRF input files. Most of the times, this can be left as the default, which has been provided below. However, there are some instances were you may need to make changes to this file, such as using instantaneous winds, TKE variables, and so on. More documentation on how to setup the configuration can be found here: 
+The `WRFDATA.CFG` file is responsible for configuring the ARL converter to run with your WRF input files. Most of the times, this can be left as the default, which has been provided below. However, there are some instances were you may need to make changes to this file, such as using instantaneous winds, TKE variables, and so on. More documentation on how to setup the configuration can be found here: https://github.com/tartanrunner25/WRF-STILT_tutorial/blob/main/Note-arw2arl.pdf
+
+For now, stick with the default `WRFDATA.CFG` file, which has been provided within the repository (top level).
+
 
 <br>
 <br>
