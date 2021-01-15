@@ -78,7 +78,7 @@ Note that in this example, we did not specify an output name, thus, the default 
 
 For cases were you are converting multiple WRF files, feel free to use the shell script provided within this repository `runarw.sh` and edit it accordingly.
 
-When running the ARL converter code, you should hopefully see the following lines being printed to your screen:
+When running the ARL converter code, you should hopefully see the following lines being printed to your terminal screen:
 
 > Using an existing decoding configuration: WRFDATA.CFG<br>
 > Using an existing encoding configuration: ARLDATA.CFG<br>
@@ -89,6 +89,8 @@ When running the ARL converter code, you should hopefully see the following line
 >  NOTICE pakini:   end initialization rec =          594<br>
 > Initialized accumulated precip from file: WRFRAIN.BIN<br>
 > Completed:           15           9          11          18           0<br>
+
+❗ The numbers printed above will depend on the domain size and date of your WRF simulations ❗
 
 <br>
 <br>
