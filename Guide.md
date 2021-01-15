@@ -107,6 +107,8 @@ Hopefully, everything ran smoothly and that you have some cool WRF ARL files to 
 
 # Tutorial
 
+Listed below is a tutorial for running WRF-STILT. In this tutorial sample WRF files have been provided for your convenience. These files can be downloaded from the following link: http://home.chpc.utah.edu/~u0703457/people_share/ARL_converter/WRF_tutorial_files/
+
 
 
 # References
