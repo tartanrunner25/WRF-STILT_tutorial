@@ -24,12 +24,14 @@ With that said, let's get you up and running with WRF.
 
 Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can be drastically improved by using time-average winds instead of the instantanous winds that are often produced for each output frame. As a result, we encourage WRF-STILT users to modify the WRF Registry so that time-average winds are added to the WRF output file. 
 
-To activate the history output for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
+To activate the history output `hr` for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
 
 <img src='registry.png' width=900px align='center' style='padding-left:50px'>
 
+The following lines should also be added added to the wrf namelist `namelist.input` under the &dynamics section:
 
-
+`do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
+`do_avgflx_cugd                      = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
 
 
 # Setting up the WRF ARL converter 
