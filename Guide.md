@@ -15,9 +15,8 @@ If you are reading this tutorial you are likely interested in running HYSPLIT-ST
 1) WRF is not easy to use. If you have a colleague that can run WRF for you, lucky you! In most cases, this is not an option. This tutorial is not meant to show you how to become a proficient WRF modeler as this can take months to even years of practice. The most this tutorial will do is show you how to convert output files already generated from WRF and run them with HYSPLIT-STILT. More information on WRF can be found [here!](https://www2.mmm.ucar.edu/wrf/users/)
 2) Always look at your model output with a careful eye. Just because WRF ran, does not mean it produced something realistic (most time it does, thankfully). Always be sure to evaluate your model data with observations!
 3) WRF is awesome, I've built my career around WRF. But running WRF may not make sense for every application. Be sure check out some of the other fantastic meteorological analyses out there and first see if they make sense for your application/research! It may not be necessary to re-invent the wheel!
-
-Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities. We would also like to akcnolwedge NOAA's Air Resources Laboratory for maintaining the HYSPLIT-STILT model code, and for sharing some of the scripts and configuration files provided below. While the authors are familar with the HYSPLIT-STILT modeling framework, note that we do have very busy work schedules and may not be able to immediately respond to every help request. With that said, let's get you up and running with WRF-STILT. 
-
+<br><br>
+If WRF-STILT still makes sense for your application, proceed below!
 
 # Before running WRF
 
@@ -169,6 +168,12 @@ In addition, download the following script `runarw_tutorial.sh` (provided in the
 **Step 5)** If the run was a success, STILT trajectory and footprint files should be located in the out directory `./out`
 <br><br>
 
+# Acknowledgements
+
+Before we conclude, the authors would like to acknowledge John C. Lin and Thomas Nehrkorn for their support on WRF-STILT related activities. We would also like to acknowledge [NOAA's Air Resources Laboratory](https://www.arl.noaa.gov) for maintaining the HYSPLIT-STILT model code, and for sharing some of the scripts and configuration files provided below. While the authors are familar with the HYSPLIT-STILT modeling framework, note that we do have very busy work schedules and may not be able to immediately respond to every help request. 
+
+We would finally like to acknowledge NOAA Climate Program Office’s Atmospheric Chemistry, Carbon Cycle, and Climate program (NA17OAR4310084) for supporting the work here.
+<br><br>
 
 # References
 
