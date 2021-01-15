@@ -30,7 +30,7 @@ To activate the history output `hr` for the variables needed by the ARL converte
 
 The following lines should also be added added to the wrf namelist `namelist.input` under the &dynamics section:
 
-`do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
+`do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`<br>
 `do_avgflx_cugd                      = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
 
 
