@@ -112,11 +112,11 @@ Listed below is a tutorial for running WRF-STILT. In this tutorial sample WRF fi
 In addition, download the following script `runarw_tutorial.sh` (provided in the top directory) for converting multiple WRF netCDF files.
 <br><br>
 
-Step 1) Downloaded the WRF files to your working directory, preferably to the same directory as your `arw2arl` executable. Edit the `runarw_tutorial.sh` script accordingly. This includes setting the correct file path locations.
+**Step 1)** Downloaded the WRF files to your working directory, preferably to the same directory as your `arw2arl` executable. Edit the `runarw_tutorial.sh` script accordingly. This includes setting the correct file path locations.
 <br><br>
-Step 2) Run the shell script: `./runarw_tutorial.sh`. Be sure that `WRFDATA.CFG` is located in in the same directory as your script. 
+**Step 2)** Run the shell script: `./runarw_tutorial.sh`. Be sure that `WRFDATA.CFG` is located in in the same directory as your script. 
 <br><br>
-Step 3) After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected. The lines lists that lines that you may want to adjust and how.
+**Step 3)** After you have successfully converted the WRF files provided above, edit the `run_stilt.r` accordingly. Note that the WRF files provided cover times between `2015-09-05_12:00:00` and `wrfout_d01_2015-09-06_03:00:00`. You will also need to change the names for `met_path` and `met_file_format`. Since this WRF simulation is centered over Salt Lake City, Utah; be sure that the correct receptor location and domain size is selected. The lines lists that lines that you may want to adjust and how.
 
 > #Simulation timing, yyyy-mm-dd HH:MM:SS (UTC)<br>
 > t_start <- '2015-09-06 00:00:00'<br>
@@ -161,13 +161,18 @@ Step 3) After you have successfully converted the WRF files provided above, edit
                 'samt', 'sigw', 'tlgr','dmas')
 
 <br><br>
-Step 4) Once you are done editing the `run_stilt.r` script, be sure to save it. Then, run the script from your terminal `Rscript run_stilt.r`
+**Step 4)** Once you are done editing the `run_stilt.r` script, be sure to save it. Then, run the script from your terminal `Rscript run_stilt.r`
 <br><br>
-Step 5) If the run was a success, STILT trajectory and footprint files should be located in the out directory `./out`
+**Step 5)** If the run was a success, STILT trajectory and footprint files should be located in the out directory `./out`
 <br><br>
 
 
 # References
 
+Mallia, D. V., L. Mitchell, L. Kunik, B. Fasoli, R. Bares, D. Mendoza, K. Gurney, and J. C. Lin:], 2020:
+Constraining urban CO2 emissions using mobile observations derived from a novel light-rail public transit platform. Environ. Sci. & Technol., 54, 24, 15613–15621.
+
 Nehrkorn, T., J. Eluszkiewicz, S. C. Wofsy, J. C. Lin, C. Gerbig, M. Longo, and S. Freitas, 2010: Coupled weather research and forecasting - stochastic time-inverted lagrangian transport (WRF-STILT) model. Meteor. Atmos. Phys., 107 (1), 51-64, doi:10.1007/s00703-010-0068-x.
+
+Skamarock, W. C., J. B. Klemp, J. Dudhia, D. O. Gill, D. Barker, M. G. Duda, J. G. Powers, 2008: A Description of the Advanced Research WRF Version 3 (No. NCAR/TN-475+STR). University Corporation for Atmospheric Research. doi:10.5065/D68S4MVH
 
