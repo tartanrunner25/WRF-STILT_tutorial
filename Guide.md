@@ -24,6 +24,21 @@ With that said, let's get you up and running with WRF.
 
 Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can be drastically improved by using time-average winds instead of the instantanous winds that are often produced for each output frame. As a result, we encourage WRF-STILT users to modify the WRF Registry so that time-average winds are added to the WRF output file. 
 
+To activate the history output for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
+
+**Before:**
+
+> state    real   muu             ij     dyn_em      1          -      -          "muu"
+> state    real   muv             ij     dyn_em      1          -      -          "muv"
+> state    real   mut             ij     dyn_em      1          -      -          "mut"
+> state    real   alt            ikj     dyn_em      1          -      -          "alt"         "inverse density"
+
+**After:**
+
+> state    real   muu             ij     dyn_em      1          -     hr          "muu"
+> state    real   muv             ij     dyn_em      1          -     hr          "muv"
+> state    real   mut             ij     dyn_em      1          -     hr          "mut"
+> state    real   alt            ikj     dyn_em      1          -     hr          "alt"         "inverse density"
 
 
 
