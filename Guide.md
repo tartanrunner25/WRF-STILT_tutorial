@@ -31,10 +31,11 @@ To activate the history output `hr` for the variables needed by the ARL converte
 The following lines should also be added added to the wrf namelist `namelist.input` under the &dynamics section:
 
 `do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`<br>
-`do_avgflx_cugd                      = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
+`do_avgflx_cugd                      = 1, 1, 1, 1, 1, 1, 1, 1, 1,`<br>
 
-Any time a change is made to the WRF Registry, WRF will need to be recompiled.
-
+Finally, note that any time a change is made to the WRF Registry, WRF will need to be recompiled.
+<br>
+<br>
 
 # Setting up the WRF ARL converter 
 
