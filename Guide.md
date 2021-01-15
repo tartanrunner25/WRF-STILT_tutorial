@@ -33,11 +33,13 @@ The following lines should also be added added to the wrf namelist `namelist.inp
 `do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`<br>
 `do_avgflx_cugd                      = 1, 1, 1, 1, 1, 1, 1, 1, 1,`
 
+Any time a change is made to the WRF Registry, WRF will need to be recompiled.
+
 
 # Setting up the WRF ARL converter 
 
 
 # References
 
-
+Nehrkorn, T., J. Eluszkiewicz, S. C. Wofsy, J. C. Lin, C. Gerbig, M. Longo, and S. Freitas, 2010: Coupled weather research and forecasting - stochastic time-inverted lagrangian transport (WRF-STILT) model. Meteor. Atmos. Phys., 107 (1), 51-64, doi:10.1007/s00703-010-0068-x.
 
