@@ -28,6 +28,11 @@ To activate the history output `hr` for the variables needed by the ARL converte
 
 <img src='registry.png' width=900px align='center' style='padding-left:50px'>
 
+`state    real   muu             ij     dyn_em      1          -     hr          "muu"
+state    real   muv             ij     dyn_em      1          -     hr          "muv"
+state    real   mut             ij     dyn_em      1          -     hr          "mut"
+state    real   alt            ikj     dyn_em      1         -      rh        "alt"         "inverse density"`
+
 The following lines should also be added added to the wrf namelist `namelist.input` under the &dynamics section:
 
 `do_avgflx_em                        = 1, 1, 1, 1, 1, 1, 1, 1, 1,`<br>
