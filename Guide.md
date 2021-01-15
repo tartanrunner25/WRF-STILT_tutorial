@@ -60,6 +60,12 @@ Once the compilation finishes, check the `exec` directory to ensure that the arw
 
 # Running the WRF ARL converter 
 
+The next step of this guide is to show you how to run the `arw2arl` code on WRF output files (which are hopefully in in netcdf format). In order to run the ARL converter, you will need 3 files:
+1) Your WRF output file(s)
+2) The ARL converter configuration file `WRFDATA.CFG`
+3) And of course, the ARL executable `arw2arl`
+
+
 <br>
 <br>
 
