@@ -26,19 +26,22 @@ Results in Nehrkorn et al. (2011) showed that mass conversation within STILT can
 
 To activate the history output for the variables needed by the ARL converter, users should change the following lines within ./Registry/Registry.EM_COMMON: 
 
+<img src='registry.png' width=800px align='center' style='padding-left:50px'>
+
+
 **Before:**
 
-> state    real   muu             ij     dyn_em      1          -      -          "muu"<br>
-> state    real   muv             ij     dyn_em      1          -      -          "muv"<br>
-> state    real   mut             ij     dyn_em      1          -      -          "mut"<br>
-> state    real   alt            ikj     dyn_em      1          -      -          "alt"         "inverse density"<br>
+> state    real   muu             ij     dyn_em      1          -      -          "muu"
+> state    real   muv             ij     dyn_em      1          -      -          "muv"
+> state    real   mut             ij     dyn_em      1          -      -          "mut"
+> state    real   alt            ikj     dyn_em      1          -      -          "alt"         "inverse density"
 
 **After:**
 
-> state    real   muu             ij     dyn_em      1          -     hr          "muu"<br>
-> state    real   muv             ij     dyn_em      1          -     hr          "muv"<br>
-> state    real   mut             ij     dyn_em      1          -     hr          "mut"<br>
-> state    real   alt            ikj     dyn_em      1          -     hr          "alt"         "inverse density"<br>
+> state    real   muu             ij     dyn_em      1          -     hr          "muu"
+> state    real   muv             ij     dyn_em      1          -     hr          "muv"
+> state    real   mut             ij     dyn_em      1          -     hr          "mut"
+> state    real   alt            ikj     dyn_em      1          -     hr          "alt"         "inverse density"
 
 
 
