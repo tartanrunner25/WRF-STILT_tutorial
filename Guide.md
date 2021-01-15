@@ -49,8 +49,8 @@ For example:
 
 Once the appropriate paths have been set, run the following commands to compile the arw2arl code:
 
-`make library/libhysplit.a library/liblbfgsb.a`<br>
-`(cd exec && make hycs_std)`
+> make library/libhysplit.a library/liblbfgsb.a<br>
+> (cd exec && make hycs_std)
 
 
 
