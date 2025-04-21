@@ -48,9 +48,9 @@ For example:
 
 Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following command to compile the hysplit and arw2arl code:
 
-> cp Makefile.inc.gfortran Makefile.inc
-> make library/libhysplit.a library/liblbfgsb.a
-> (cd exec && make hycs_std xtrct_grid xtrct_time)
+> cp Makefile.inc.gfortran Makefile.inc<br>
+> make library/libhysplit.a library/liblbfgsb.a<br>
+> (cd exec && make hycs_std xtrct_grid xtrct_time)<br>
 > (cd data2arl/arw2arl && make)
 
 Once the compilation finishes, check the `exec` directory to ensure that the arw2arl executable has been created. If hysplit, along with its required libraries, just run the make command for the arw2arl converter.
