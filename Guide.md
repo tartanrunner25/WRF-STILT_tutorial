@@ -48,6 +48,7 @@ For example:
 
 Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following command to compile the hysplit and arw2arl code:
 
+> #If using 'gfortran'....<br>
 > cp Makefile.inc.gfortran Makefile.inc<br>
 > make library/libhysplit.a library/liblbfgsb.a<br>
 > (cd exec && make hycs_std xtrct_grid xtrct_time)<br>
