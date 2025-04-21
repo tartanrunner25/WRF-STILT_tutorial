@@ -46,11 +46,14 @@ For example:
 > NETINC= -I/uufs/chpc.utah.edu/common/home/lin-group12/software/local/include<br>
 > NETLIBS= -L/uufs/chpc.utah.edu/common/home/lin-group12/software/local/lib -lnetcdff	# for netCDF4<br>
 
-Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following command to compile the arw2arl code:
+Once the appropriate paths have been set for `NETINC` and `NETLIBS`, run the following command to compile the hysplit and arw2arl code:
 
+> cp Makefile.inc.gfortran Makefile.inc
+> make library/libhysplit.a library/liblbfgsb.a
+> (cd exec && make hycs_std xtrct_grid xtrct_time)
 > (cd data2arl/arw2arl && make)
 
-Once the compilation finishes, check the `exec` directory to ensure that the arw2arl executable has been created. 
+Once the compilation finishes, check the `exec` directory to ensure that the arw2arl executable has been created. If hysplit, along with its required libraries, just run the make command for the arw2arl converter.
 
 <br>
 <br>
